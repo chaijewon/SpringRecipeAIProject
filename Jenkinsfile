@@ -50,8 +50,8 @@ pipeline {
 					    SPRING_PROFILES_ACTIVE=prod
 					    POST_URL=${POST_URL}
 					    GEN_KEY=${GEN_KEY}
+					    chmod 600 .env
 					    EOF
-					      chmod 600 .env
 					   '''
 				}
 			}
