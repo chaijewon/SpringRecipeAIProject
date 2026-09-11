@@ -185,7 +185,7 @@ pipeline {
 					sh '''
 					    ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@3.36.16.172 "mkdir -p /home/ubuntu/app"
 					    
-					    scp -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@3.36.16.172 docker-compose.yml ubuntu@3.36.16.172:/home/ubuntu/app/docker-compose.yml
+					    scp -i "$SSH_KEY" -o StrictHostKeyChecking=no docker-compose.yml ubuntu@3.36.16.172:/home/ubuntu/app/docker-compose.yml
 					   '''
 					   
 				}
