@@ -217,12 +217,12 @@ pipeline {
 post {
 	success {
 		echo '======================='
-		echo 'Docket Compose 배포 성공'
+		echo 'Docket Compose 배포 성공!!'
 		echo '======================='
 	}
 	failure {
 		echo '======================='
-		echo 'Docket Compose 배포 실패'
+		echo 'Docket Compose 배포 실패!!'
 		echo '======================='
 		sh '''
 		    docker compose ps || true
