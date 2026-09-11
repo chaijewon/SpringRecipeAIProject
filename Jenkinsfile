@@ -202,14 +202,11 @@ pipeline {
 					)
 				]){
 					sh '''
-					    ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@3.36.16.172<<EOF
-					    cd /home/ubuntu/app
-					    docker-compose down
-					    docker-compose pull
-					    docker-compose up -d
-					    
-					    EOF
-					    
+					    ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@3.36.16.172 \
+					    "cd /home/ubuntu/app && \
+					    docker-compose down && \
+					    docker-compose pull && \
+					    docker-compose up -d"
 					   '''
 				}
 			}
