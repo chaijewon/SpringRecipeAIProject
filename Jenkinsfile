@@ -53,7 +53,7 @@ pipeline {
 			steps {
 				sh '''
 				    java -version
-				    ./gradlew --version
+				    
 				   '''
 			}
 		}
